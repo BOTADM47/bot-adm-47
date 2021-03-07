@@ -78,9 +78,9 @@ const { othermenu } require('./database/menu/othermenu')*/
 /******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:Toin🖤\n' // full name
-            + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=556296638900:+55 (62) 9663-8900\n' // ID do WhatsApp + número de telefone
+            + 'FN:ADM 47🖤\n' // full name
+            + 'ORG:BOT do 47;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=5571988224806:+55 (71) 988224806\n' // ID do WhatsApp + número de telefone
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
@@ -246,7 +246,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Calmaer opoha to fazendo ⌛',
+				wait: '⌛ Calmae poha to fazendo ⌛',
 				success: '✔️ Sucesso ✔️',
                                 levelon: '❬ ✔ ❭ *habilitar Level*',
 				leveloff: ' ❬ X ❭  *desabilitar Level*',
@@ -259,17 +259,17 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando só pode ser usado em grupos! ❌',
 					ownerG: '[❗] Este comando só pode ser usado pelo grupo proprietário! ❌',
-					ownerB: '[❗] Este comando só pode ser usado pelo Toin! ❌',
+					ownerB: '[❗] Este comando só pode ser usado pelo 47! ❌',
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: '[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
-                                        daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar Toin|18`,
+                                        daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar adm 47|18`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["556296638900@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["557188224806@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -287,7 +287,7 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '556296638900@s.whatsapp.net'
+                        const NomerOwner = '557188224806@s.whatsapp.net'
                         /******ApiKey Input******/
                         const BarBarKey = 'YOUR_APIKEY'
                         /******End of ApiKey Input******/
@@ -458,7 +458,7 @@ case 'timer':
                 break
               case 'owner':
                 case 'creator':
-                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
+                  client.sendMessage(from, {displayname: "47", vcard: vcard}, MessageType.contact, { quoted: mek})
                client.sendMessage(from, 'Aqui está o número do meu dono, salve depois',MessageType.text, { quoted: mek} )
                 break
 	case 'hidetag':
